@@ -41,8 +41,18 @@ docker-compose up --build
    ```
 3. Run the application:
    ```bash
-   uvicorn app.main:app --reload
+   uvicorn app.main:app --host 0.0.0.0 --port 8000
    ```
+
+## 🌐 Local Network Access
+
+To access ARC from other devices on your local network:
+
+1. **Find your Local IP Address**:
+   - On Windows: Run `ipconfig` in CMD. Look for `IPv4 Address` (e.g., `192.168.1.50`).
+   - On Linux/Mac: Run `ifconfig` or `ip addr`.
+2. **Access the Web UI**:
+   - From another device, open a browser and go to `http://<YOUR_IP>:8000`.
 
 ## 🧪 Testing
 
